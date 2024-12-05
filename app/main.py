@@ -15,7 +15,6 @@ def zone_apex():
     return {"Good Day": "Sunshine!"}
 
 @app.get("/add/{a}/{b}")
-@app.get("/sum/{a}/{b}")
 def add(a: int, b: int):
     return {"sum": a + b}
 
@@ -25,5 +24,8 @@ def multiply(c: int, d: int):
 
 @app.get("/square/{e}")
 def square(e: int):
-    return {"square": e * e) 
+    return {"square": e * e} 
 
+@app.get("/subtract/{x}/{y}")
+def subtract(x: int, y: int):
+    return {"difference": x - y}
